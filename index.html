@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>The Power of M</title>
+
+    <meta name="description" content="An exploration of values in the world of MVC">
+    <meta name="author" content="Charles Lowell">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+     if( window.location.search.match( /print-pdf/gi ) ) {
+       var link = document.createElement( 'link' );
+       link.rel = 'stylesheet';
+       link.type = 'text/css';
+       link.href = 'css/print/pdf.css';
+       document.getElementsByTagName( 'head' )[0].appendChild( link );
+     }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="fragment">Client Side UI</h1>
+        </section>
+        <section data-id="845f5df9a90794cfe05df0f66b5ad163">
+          <h1>The Power Of M</h1>
+          <div>Charles Lowell</div>
+          <div><a href="http://twitter.com/cowboyd">@cowboyd</a></div>
+          <div><a href="http://frontside.io">frontside.io</a></div>
+        </section>
+        <section>
+          <h1><strong>M</strong> is for MVC</h1>
+          <p>The foundational software pattern on which UIs are built</p>
+        </section>
+        <section>
+          <h2>What is it really?</h2>
+        </section>
+        <section>
+          <h2>Will the <em>real</em> MVC please stand up.</h2>
+          <img src="real-mvc.png"/>
+        </section>
+        <section>
+          <h1>Is Rails MVC?</h1>
+        </section>
+        <section>
+          <h1>Yes</h1>
+          <p>Rails is <em>server side</em> MVC</p>
+        </section>
+        <section>
+          <h1>MVC is like Kung-Fu</h1>
+          <p>there are many paths...</p>
+        </section>
+        <section>
+          <h2>The path of the <em>client-side</em> is fraught with state.</h2>
+        </section>
+        <section style="font-size: 400%">
+          <div class="fragment grow" style="display: inline-block;" data-fragment-index=1>M</div>
+          <div class="fragment shrink" style="display: inline-block;" data-fragment-index=1>VC</div>
+          <p class="fragment" style="font-size: 25%" data-fragment-index=1>Focus on the model.</p>
+        </section>
+        <section>
+          <h2>
+            This guy gets it.
+          </h2>
+          <img src="plato.jpeg" height=400/>
+        </section>
+        <section data-background="plato-cave.jpg" data-background-size="100%"></section>
+        <section>
+          <h2>Principle in action</h2>
+          <p>What is a color?</p>
+        </section>
+        <section>
+          <img src="diagrams/color.svg"/>
+        </section>
+        <section>
+          <h3>Color Swatch: Project a Color onto a &lt;div/&gt;</h3>
+          <img src="diagrams/swatch.svg" height=500/>
+        </section>
+        <section data-id="5c13d9bbb87a0d4dd520ed2a60bedb0e">
+          <h2>Swatch on. Swatch off</h2>
+          <iframe style="margin-top: 50px;" src="code/initializr/index.html#single-swatch" height="150" width="100"></iframe>
+        </section>
+        <section>
+          <h3>One color, two swatches</h3>
+            <img src="diagrams/double-swatch.svg"/>
+        </section>
+        <section>
+          <h3>(Swatch on. Swatch off.) X 2</h3>
+          <iframe src="code/initializr/index.html#double-swatch" height=150 width=205></iframe>
+        </section>
+        <section>
+          <h1>Data Binding</h1>
+          <h2>It's not just for templates anymore</h2>
+        </section>
+        <section>
+          <h2>Bound together</h2>
+          <img src="diagrams/double-swatch.svg"/>
+        </section>
+        <section>
+          Data Binding != Observation
+        </section>
+        <section>
+          <h2> Data Binding</h2>
+          <ul>
+            <li> Conjoins properties of the same data type.</li>
+            <li> Higher level abstraction than observation</li>
+          </ul>
+        </section>
+        <section>
+          <h3>And the two will become one flesh.</h3>
+            <img src="diagrams/two-way-binding.svg"/>
+        </section>
+        <section>
+          <h2>Data Binding</h2>
+          Decouples data flow from computation
+        </section>
+        <section>
+          <h3>Project Color onto Color</h3>
+          <img src="diagrams/desaturator.svg"/>
+        </section>
+        <section>
+          <h3>Plug it in with bindings</h3>
+          <img src="diagrams/desaturated-swatch.svg"/>
+        </section>
+        <section>
+          <h2>Desaturimificate</h2>
+          <iframe src="code/initializr/index.html#two-swatches-with-desaturation" width=400></iframe>
+        </section>
+        <section>
+          <h2>Text Input Anyone?</h2>
+          <img src="diagrams/color-2-string.svg">
+        </section>
+        <section>
+          Syntax: A model of serialization and deserialization.
+          <img src="diagrams/color-syntax.svg">
+        </section>
+        <section>
+          Double text fields. Double fun!
+          <img src="diagrams/two-text-fields-connected.svg"/>
+        </section>
+        <section>
+          <h3>One color. Two text fields.</h3>
+            <iframe src="code/initializr/index.html#two-swatches-with-desaturation-and-two-text-inputs" width=400 height=300></iframe>
+        </section>
+        <section>
+          <h2> Decompose the color</h2>
+          <img src="diagrams/rgb-selector.svg"/>
+        </section>
+        <section>
+          <h2> Recompose for fun and profit. </h2>
+          <img src="diagrams/rgb-selector-integrated.svg"/>
+        </section>
+        <section>
+          <iframe src="code/initializr/index.html#integrated-rgb-selector" height=300 width=300></iframe>
+        </section>
+        <section>
+          <h2> What does an RGB look like?</h2>
+          <img src="diagrams/rgb-visualization-integrated.svg"/>
+        </section>
+        <section>
+          <iframe src="code/initializr/index.html#integrated-rgb-visualization" height=350 width=600"></iframe>
+        </section>
+        <section>
+          <h2>But RGB is for Hardware</h2>
+        </section>
+        <section>
+          <h1>HSL</h1>
+          <p>Color coordinates for humans</p>
+        </section>
+        <section>
+          <h1>Hue</h1>
+          <blockquote>the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow</blockquote>
+        </section>
+        <section>
+          <h1>Saturation</h1>
+          <blockquote>colorfulness of a color relative to its own brightness</blockquote>
+        </section>
+        <section>
+          <h1>Lightness</h1>
+          <blockquote>the subjective brightness perception of a color for humans along a lightness–darkness axis.</blockquote>
+        </section>
+        <section>
+          <h1>HSL</h1>
+          <h1>?</h1>
+        </section>
+        <section>
+          <h3>Decompose the color</h3>
+          <img src="diagrams/hsl-selector.svg"/>
+        </section>
+        <section>
+          <h3>Play around for insight</h3>
+          <img src="diagrams/hsl-selector-integrated.svg"/>
+        </section>
+        <section>
+          <iframe src="code/initializr/index.html#integrated-hsl-selector" height=350 width=800></iframe>
+        </section>
+        <section>
+          <h2>Visualize it</h2>
+        </section>
+        <section>
+          <h3>Friendly Robot</h3>
+          <image src="diagrams/hsl-visualization-integrated.svg"/>
+        </section>
+        <section>
+          <iframe src="code/initializr/index.html#integrated-hsl-visualization" height=350 width=1024></iframe>
+        </section>
+        <section>
+          <h3>Values are everywhere</h3>
+          <img src="diagrams/server.svg">
+        </section>
+        <section>
+          <h1> Colorbook</h1>
+          <p>The first social network for color values</p>
+        </section>
+        <section>
+          <h3>&ldquo;PHP&rdquo;</h3>
+          <img src="diagrams/server-integrated.svg"/>
+        </section>
+        <section>
+          <h1>Demo</h1>
+        </section>
+        <section>
+          <h2>The power of M <em>is</em> simple</h2>
+        </section>
+        <section>
+          <img src="diagrams/hsl-selector.svg"/>
+        </section>
+        <section>
+          <h1>Model</h1>
+          <p>A group of values with <span style="text-transform: underline;">well understood</span> relationships</p>
+        </section>
+        <section>
+          <h3>It's the understanding part what's hard</h3>
+          <img src="geb.png" width="40%"/>
+        </section>
+        <section data-background="plato-cave.jpg" data-background-size="100%">
+
+        </section>
+        <section>
+          <h2>You</h2>
+          <img src="plato.jpeg" height=400/>
+        </section>
+        <section>
+          <h1>Thank You</h1>
+          <div><a href="http://twitter.com/cowboyd">@cowboyd</a></div>
+          <div><a href="http://frontside.io">frontside.io</a></div>
+        </section>
+      </div>
+
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.min.js"></script>
+
+      <script>
+
+       // Full list of configuration options available here:
+       // https://github.com/hakimel/reveal.js#configuration
+       Reveal.initialize({
+         controls: false,
+         progress: false,
+         history: true,
+         center: true,
+         
+
+         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+         transition: 'none',
+         //transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+         backgroundTransition: 'none',//'slide',
+         // Parallax scrolling
+         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+         // parallaxBackgroundSize: '2100px 900px',
+
+         // Optional libraries used to extend on reveal.js
+         dependencies: [
+           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+           { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+           { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+           { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+         ]
+       });
+
+      </script>
+
+  </body>
+</html>

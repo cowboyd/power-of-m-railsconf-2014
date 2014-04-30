@@ -1,0 +1,22 @@
+{
+  "name": "colors",
+  "version": "0.0.0",
+  "description": "These are my colors",
+  "main": "lib/colors.js",
+  "dependencies": {
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-coffee-preprocessor": "*",
+    "karma-firefox-launcher": "*",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma-html2js-preprocessor": "*",
+    "karma-mocha": "*",
+    "karma-chai": "*",
+    "coffee-script": "~1.7.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Charles Lowell",
+  "license": "MIT"
+}
