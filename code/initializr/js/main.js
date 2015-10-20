@@ -352,23 +352,23 @@ App.RgbBlendComponent = Ember.Component.extend({
       beginPath()
       arc(.375 * width, .375 * height, radius, 0, Math.PI * 2)
       stroke()
-      setAlpha(rgb.r / 255)
+      globalAlpha = rgb.r / 255
       fillStyle = "#ff0000"
       fill()
       closePath()
-      setAlpha(1)
+      globalAlpha = 1;
       beginPath()
       arc(.625 * width, .375 * height, radius, 0, Math.PI*2)
       stroke()
-      setAlpha(rgb.g / 255)
+      globalAlpha = rgb.g / 255
       fillStyle = "#00ff00"
       fill()
       closePath()
-      setAlpha(1)
+      globalAlpha = 1
       beginPath()
       arc(.5 * width, .6 * height, radius, 0, Math.PI*2)
       stroke()
-      setAlpha(rgb.b / 255)
+      globalAlpha = rgb.b / 255
       fillStyle = '#0000ff'
       fill()
       closePath()
